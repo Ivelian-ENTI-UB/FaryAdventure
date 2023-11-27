@@ -234,7 +234,7 @@ CREATE TABLE USERS (
     password CHAR(32) NOT NULL,
     email VARCHAR(32) NOT NULL,
     birthdate DATE,
-    registered DATETIME
+    registered DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 INSERT INTO
@@ -247,3 +247,14 @@ VALUES
         '2000-01-01',
         '2023-11-27 14:21:01'
     );
+
+INSERT INTO
+    USERS (username, password, email, birthdate)
+VALUES
+    (
+        'ELXocas 2.0',
+        'e7aff4fe77bd61a174ddd2e8af373eab',
+        'ElXocas2.0@gmail.com',
+        '2020-01-01';
+
+);
