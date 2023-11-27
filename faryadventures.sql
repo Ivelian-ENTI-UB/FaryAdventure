@@ -1,3 +1,4 @@
+/*Database Fary Adventures*/
 DROP TABLE IF EXISTS characters_items;
 
 DROP TABLE IF EXISTS stats;
