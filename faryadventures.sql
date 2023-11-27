@@ -233,15 +233,17 @@ CREATE TABLE USERS (
     username VARCHAR(32) NOT NULL,
     password CHAR(32) NOT NULL,
     email VARCHAR(32) NOT NULL,
-    birthdate DATE
+    birthdate DATE,
+    registered DATETIME
 );
 
 INSERT INTO
-    USERS (username, password, email, birthdate)
+    USERS (username, password, email, birthdate, registered)
 VALUES
     (
         'ELXocas',
         'f5262801df669ef08d7879b98a893045',
         'ElXocas@gmail.com',
-        '2000-01-01'
+        '2000-01-01',
+        '2023-11-27 14:21:01'
     );
