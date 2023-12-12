@@ -43,7 +43,7 @@ VALUES
     ('El Cigala', 640, 'M', 201, 80, 2.4, 150, 'RU'),
     ('El Churumbel', 33, 'M', 34, 33, 3.3, 333, 'AS'),
     ('El Kiko', -1, 'F', 70, 100, 1.1, 420, 'RE'),
-    ('Escalona',,,,,,,);
+    ('Escalona', 18, 'M', 0, 1, 1.8, 80, 'ES');
 
 CREATE TABLE stats (
     id_stat INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -256,6 +256,29 @@ VALUES
         'ELXocas 2.0',
         'e7aff4fe77bd61a174ddd2e8af373eab',
         'ElXocas2.0@gmail.com',
-        '2020-01-01';
+        '2020-01-01'
+    );
 
-);
+DROP PROCEDURE IF EXISTS ruleta_escalona;
+
+DELIMITER $ $ CREATE PROCEDURE ruleta_escalona () BEGIN DECLARE random INT;
+
+SELECT
+    FLOOR(RAND() * 10) + 1 INTO random;
+
+IF random = 5 THEN
+DELETE from
+    characters
+where
+    id_character = 5;
+
+SELECT
+    "HAS MUERTO";
+
+ELSE
+SELECT
+    "EmpananadaCarnica";
+
+END IF;
+
+END $ $
