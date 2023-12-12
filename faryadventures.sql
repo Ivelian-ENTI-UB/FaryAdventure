@@ -42,7 +42,8 @@ VALUES
     ('El Fary', 86, 'N', 201, 70, 1.2, 47, 'GY'),
     ('El Cigala', 640, 'M', 201, 80, 2.4, 150, 'RU'),
     ('El Churumbel', 33, 'M', 34, 33, 3.3, 333, 'AS'),
-    ('El Kiko', -1, 'F', 70, 100, 1.1, 420, 'RE');
+    ('El Kiko', -1, 'F', 70, 100, 1.1, 420, 'RE'),
+    ('Escalona',,,,,,,);
 
 CREATE TABLE stats (
     id_stat INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
